@@ -1,0 +1,184 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36" version="26.2.3">
+  <diagram name="Page-1" id="c7558073-3199-34d8-9f00-42111426c3f3">
+    <mxGraphModel dx="1099" dy="656" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="826" pageHeight="1169" background="none" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="4" value="Trade Correct&#xa;(ExecType&lt;150&gt;=G &amp;&amp; OrdStatus &lt;39&gt;=2)    " style="whiteSpace=wrap;align=center;verticalAlign=middle;fontStyle=1;strokeWidth=3;fillColor=#FFFFCC" parent="1" vertex="1">
+          <mxGeometry x="270" y="120" width="200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="37" value="" style="edgeStyle=none;noEdgeStyle=1;strokeColor=#990000;strokeWidth=2;" parent="1" edge="1">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="370" y="200" as="sourcePoint" />
+            <mxPoint x="369.5" y="320" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rh4mJw4lm3L261S2mCym-98" value="Unsolicited Order" style="swimlane;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
+          <mxGeometry x="30" y="680" width="240" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="rh4mJw4lm3L261S2mCym-103" value="&lt;ol&gt;&lt;li&gt;Update Status of actual unsolicited Order to &lt;b&gt;Pending Update&lt;/b&gt;&lt;/li&gt;&lt;li&gt;Create new Unsolicited Order with status &lt;b&gt;Pending&amp;nbsp;Correction&lt;/b&gt;&lt;/li&gt;&lt;li&gt;Link actual order to newly created order as associated order&lt;/li&gt;&lt;/ol&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#f5f5f5;fontColor=#333333;strokeColor=none;" parent="rh4mJw4lm3L261S2mCym-98" vertex="1">
+          <mxGeometry y="20" width="240" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="rh4mJw4lm3L261S2mCym-100" value="NO" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#f0a30a;strokeColor=#BD7000;strokeWidth=2;" parent="1" source="rh4mJw4lm3L261S2mCym-99" target="rh4mJw4lm3L261S2mCym-101" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="550" y="380" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="440" y="380" />
+              <mxPoint x="440" y="380" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rh4mJw4lm3L261S2mCym-99" value="&lt;div&gt;Is&lt;/div&gt;Actual Order&amp;nbsp;&lt;div&gt;present?&amp;nbsp;&lt;/div&gt;" style="rhombus;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="310" y="320" width="120" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="rh4mJw4lm3L261S2mCym-101" value="Reject/Ignore Drop copy message" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=default;perimeterSpacing=1;gradientColor=none;" parent="1" vertex="1">
+          <mxGeometry x="490" y="350" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="rh4mJw4lm3L261S2mCym-102" value="YES&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#a20025;strokeColor=#6F0000;strokeWidth=2;" parent="1" source="rh4mJw4lm3L261S2mCym-99" target="rh4mJw4lm3L261S2mCym-104" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="369" y="510" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rh4mJw4lm3L261S2mCym-104" value="Is&amp;nbsp;&lt;div&gt;Actual Order&amp;nbsp;&lt;div&gt;status is&lt;/div&gt;&lt;div&gt;&lt;b&gt;Accepted?&lt;/b&gt;&lt;/div&gt;&lt;/div&gt;" style="rhombus;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="310" y="530" width="120" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="rh4mJw4lm3L261S2mCym-105" value="NO&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fillColor=#f0a30a;strokeColor=#BD7000;strokeWidth=2;" parent="1" source="rh4mJw4lm3L261S2mCym-104" target="rh4mJw4lm3L261S2mCym-98" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="369" y="690" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="150" y="580" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rh4mJw4lm3L261S2mCym-111" value="Unsolicited Order" style="swimlane;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
+          <mxGeometry x="30" y="1000" width="240" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="rh4mJw4lm3L261S2mCym-112" value="&lt;ol&gt;&lt;li&gt;Update Status of actual Order to &lt;b&gt;Updated&lt;/b&gt;&lt;/li&gt;&lt;li&gt;Update new Unsolicited Order with status &lt;b&gt;Correction Confirmed&lt;/b&gt;&lt;/li&gt;&lt;/ol&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" parent="rh4mJw4lm3L261S2mCym-111" vertex="1">
+          <mxGeometry y="20" width="240" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="rh4mJw4lm3L261S2mCym-113" value="[User Action: &lt;b&gt;Confirm Correction]&lt;/b&gt;" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fillColor=#f0a30a;strokeColor=#BD7000;strokeWidth=2;" parent="1" source="rh4mJw4lm3L261S2mCym-98" target="rh4mJw4lm3L261S2mCym-111" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="510" y="950" as="sourcePoint" />
+            <mxPoint x="610" y="950" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rh4mJw4lm3L261S2mCym-115" value="Unsolicited Order" style="swimlane;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
+          <mxGeometry x="510" y="680" width="240" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="rh4mJw4lm3L261S2mCym-116" value="&lt;ol&gt;&lt;li&gt;Actual unsolicited order stay in &lt;b&gt;Accepted &lt;/b&gt;status&lt;/li&gt;&lt;li&gt;Actual unsolicited&amp;nbsp; order also has an associated &lt;b&gt;Block(Front Global) Order&lt;/b&gt; with it.&lt;/li&gt;&lt;li&gt;Create new Unsolicited Order with status &lt;b&gt;Pending&amp;nbsp;Correction&lt;/b&gt;&lt;/li&gt;&lt;li&gt;Link actual unsolicited&amp;nbsp;order to newly created order as associated order&lt;/li&gt;&lt;/ol&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#f5f5f5;fontColor=#333333;strokeColor=none;" parent="rh4mJw4lm3L261S2mCym-115" vertex="1">
+          <mxGeometry y="20" width="240" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="rh4mJw4lm3L261S2mCym-117" value="&lt;div&gt;YES&lt;/div&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fillColor=#fff2cc;strokeColor=#d6b656;curved=0;strokeWidth=2;gradientColor=#ffd966;" parent="1" source="rh4mJw4lm3L261S2mCym-104" target="rh4mJw4lm3L261S2mCym-115" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="790" y="580" as="sourcePoint" />
+            <mxPoint x="849" y="690" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rh4mJw4lm3L261S2mCym-118" value="Unsolicited Order" style="swimlane;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
+          <mxGeometry x="450" y="1270" width="240" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="rh4mJw4lm3L261S2mCym-119" value="&lt;ol&gt;&lt;li&gt;&lt;span style=&quot;color: rgba(0, 0, 0, 0); font-family: monospace; font-size: 0px; text-wrap-mode: nowrap;&quot;&gt;%3CmxGraphModel%3E%3Croot%3E%3CmxCell%20id%3D%220%22%2F%3E%3CmxCell%20id%3D%221%22%20parent%3D%220%22%2F%3E%3CmxCell%20id%3D%222%22%20value%3D%22Unsolicited%20Order%22%20style%3D%22swimlane%3BwhiteSpace%3Dwrap%3Bhtml%3D1%3BfillColor%3D%23e1d5e7%3BstrokeColor%3D%239673a6%3B%22%20vertex%3D%221%22%20parent%3D%221%22%3E%3CmxGeometry%20x%3D%2240%22%20y%3D%22920%22%20width%3D%22240%22%20height%3D%22160%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3CmxCell%20id%3D%223%22%20value%3D%22%26lt%3Bol%26gt%3B%26lt%3Bli%26gt%3BUpdate%20Status%20of%20actual%20Order%20to%20%26lt%3Bb%26gt%3BCancelled%26lt%3B%2Fb%26gt%3B%26lt%3B%2Fli%26gt%3B%26lt%3Bli%26gt%3BUpdate%20new%20Unsolicited%20Order%20with%20status%20%26lt%3Bb%26gt%3BCancelled%20Confirmed%26lt%3B%2Fb%26gt%3B%26lt%3B%2Fli%26gt%3B%26lt%3B%2Fol%26gt%3B%22%20style%3D%22text%3Bhtml%3D1%3Balign%3Dleft%3BverticalAlign%3Dmiddle%3BwhiteSpace%3Dwrap%3Brounded%3D0%3BfillColor%3D%23f5f5f5%3BfontColor%3D%23333333%3BstrokeColor%3D%23666666%3B%22%20vertex%3D%221%22%20parent%3D%222%22%3E%3CmxGeometry%20y%3D%2220%22%20width%3D%22240%22%20height%3D%22140%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3CmxCell%20id%3D%224%22%20value%3D%22%5BUser%20Action%3A%20%26lt%3Bb%26gt%3BCancel%20Confirm%5D%26lt%3B%2Fb%26gt%3B%22%20style%3D%22endArrow%3Dclassic%3Bhtml%3D1%3Brounded%3D0%3BexitX%3D0.5%3BexitY%3D1%3BexitDx%3D0%3BexitDy%3D0%3BentryX%3D0.5%3BentryY%3D0%3BentryDx%3D0%3BentryDy%3D0%3BfillColor%3D%23f0a30a%3BstrokeColor%3D%23BD7000%3BstrokeWidth%3D2%3B%22%20edge%3D%221%22%20target%3D%222%22%20parent%3D%221%22%3E%3CmxGeometry%20relative%3D%221%22%20as%3D%22geometry%22%3E%3CmxPoint%20x%3D%22160%22%20y%3D%22760%22%20as%3D%22sourcePoint%22%2F%3E%3CmxPoint%20x%3D%22620%22%20y%3D%22870%22%20as%3D%22targetPoint%22%2F%3E%3C%2FmxGeometry%3E%3C%2FmxCell%3E%3C%2Froot%3E%3C%2FmxGraphModel%3E&lt;/span&gt;Update Status of actual Order to &lt;b style=&quot;background-color: transparent; color: light-dark(rgb(51, 51, 51), rgb(193, 193, 193));&quot;&gt;Updated&lt;/b&gt;&lt;/li&gt;&lt;li&gt;Update new Unsolicited Order with status &lt;b&gt;Correction Confirmed&lt;/b&gt;&lt;/li&gt;&lt;/ol&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" parent="rh4mJw4lm3L261S2mCym-118" vertex="1">
+          <mxGeometry y="20" width="240" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="rh4mJw4lm3L261S2mCym-120" value="[User Action:&amp;nbsp;&lt;b&gt;Confirm Correction&lt;/b&gt;&lt;b&gt;]&lt;/b&gt;" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.571;entryY=0;entryDx=0;entryDy=0;fillColor=#fff2cc;strokeColor=#d6b656;strokeWidth=2;edgeStyle=orthogonalEdgeStyle;entryPerimeter=0;gradientColor=#ffd966;" parent="1" target="rh4mJw4lm3L261S2mCym-126" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="630" y="840" as="sourcePoint" />
+            <mxPoint x="1090" y="950" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="630" y="890" />
+              <mxPoint x="630" y="890" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rh4mJw4lm3L261S2mCym-129" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0.48;exitY=0;exitDx=0;exitDy=0;exitPerimeter=0;fillColor=#fff2cc;gradientColor=#ffd966;strokeColor=#d6b656;endSize=6;fontStyle=1;strokeWidth=2;" parent="1" source="rh4mJw4lm3L261S2mCym-121" target="rh4mJw4lm3L261S2mCym-127" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="680" y="1070" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="680" y="1025" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rh4mJw4lm3L261S2mCym-121" value="Front Global Order (Block Order)" style="swimlane;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
+          <mxGeometry x="560" y="1080" width="250" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="rh4mJw4lm3L261S2mCym-122" value="&lt;ol&gt;&lt;li&gt;Force Cancel Front Global Order associated with actual unsolicited order&lt;span style=&quot;color: rgba(0, 0, 0, 0); font-family: monospace; font-size: 0px; text-wrap-mode: nowrap;&quot;&gt;%3CmxGraphModel%3E%3Croot%3E%3CmxCell%20id%3D%220%22%2F%3E%3CmxCell%20id%3D%221%22%20parent%3D%220%22%2F%3E%3CmxCell%20id%3D%222%22%20value%3D%22Unsolicited%20Order%22%20style%3D%22swimlane%3BwhiteSpace%3Dwrap%3Bhtml%3D1%3BfillColor%3D%23e1d5e7%3BstrokeColor%3D%239673a6%3B%22%20vertex%3D%221%22%20parent%3D%221%22%3E%3CmxGeometry%20x%3D%2240%22%20y%3D%22920%22%20width%3D%22240%22%20height%3D%22160%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3CmxCell%20id%3D%223%22%20value%3D%22%26lt%3Bol%26gt%3B%26lt%3Bli%26gt%3BUpdate%20Status%20of%20actual%20Order%20to%20%26lt%3Bb%26gt%3BCancelled%26lt%3B%2Fb%26gt%3B%26lt%3B%2Fli%26gt%3B%26lt%3Bli%26gt%3BUpdate%20new%20Unsolicited%20Order%20with%20status%20%26lt%3Bb%26gt%3BCancelled%20Confirmed%26lt%3B%2Fb%26gt%3B%26lt%3B%2Fli%26gt%3B%26lt%3B%2Fol%26gt%3B%22%20style%3D%22text%3Bhtml%3D1%3Balign%3Dleft%3BverticalAlign%3Dmiddle%3BwhiteSpace%3Dwrap%3Brounded%3D0%3BfillColor%3D%23f5f5f5%3BfontColor%3D%23333333%3BstrokeColor%3D%23666666%3B%22%20vertex%3D%221%22%20parent%3D%222%22%3E%3CmxGeometry%20y%3D%2220%22%20width%3D%22240%22%20height%3D%22140%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3CmxCell%20id%3D%224%22%20value%3D%22%5BUser%20Action%3A%20%26lt%3Bb%26gt%3BCancel%20Confirm%5D%26lt%3B%2Fb%26gt%3B%22%20style%3D%22endArrow%3Dclassic%3Bhtml%3D1%3Brounded%3D0%3BexitX%3D0.5%3BexitY%3D1%3BexitDx%3D0%3BexitDy%3D0%3BentryX%3D0.5%3BentryY%3D0%3BentryDx%3D0%3BentryDy%3D0%3BfillColor%3D%23f0a30a%3BstrokeColor%3D%23BD7000%3BstrokeWidth%3D2%3B%22%20edge%3D%221%22%20target%3D%222%22%20parent%3D%221%22%3E%3CmxGeometry%20relative%3D%221%22%20as%3D%22geometry%22%3E%3CmxPoint%20x%3D%22160%22%20y%3D%22760%22%20as%3D%22sourcePoint%22%2F%3E%3CmxPoint%20x%3D%22620%22%20y%3D%22870%22%20as%3D%22targetPoint%22%2F%3E%3C%2FmxGeometry%3E%3C%2FmxCell%3E%3C%2Froot%3E%3C%2FmxGraphModel%3&lt;/span&gt;&lt;/li&gt;&lt;/ol&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" parent="rh4mJw4lm3L261S2mCym-121" vertex="1">
+          <mxGeometry y="20" width="250" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="rh4mJw4lm3L261S2mCym-128" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.92;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;fillColor=#fff2cc;gradientColor=#ffd966;strokeColor=#d6b656;strokeWidth=2;" parent="1" source="rh4mJw4lm3L261S2mCym-126" target="rh4mJw4lm3L261S2mCym-121" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="790" y="930" />
+            </Array>
+            <mxPoint x="750" y="1020" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rh4mJw4lm3L261S2mCym-126" value="&lt;br&gt;&lt;span style=&quot;color: rgb(51, 51, 51); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;Get associated Front Global Order associated with actual&amp;nbsp;&lt;span&gt;unsolicited&amp;nbsp;&lt;/span&gt;order and try &lt;/span&gt;&lt;span style=&quot;color: rgb(51, 51, 51); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;&lt;b&gt;Force Cancel&lt;/b&gt;&lt;/span&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="470" y="900" width="280" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="rh4mJw4lm3L261S2mCym-130" value="YES" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;fillColor=#fff2cc;gradientColor=#ffd966;strokeColor=#d6b656;strokeWidth=2;" parent="1" source="rh4mJw4lm3L261S2mCym-127" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="520" y="1080" />
+              <mxPoint x="520" y="1270" />
+            </Array>
+            <mxPoint x="520" y="1270" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rh4mJw4lm3L261S2mCym-134" value="NO" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fillColor=#ffcd28;gradientColor=#ffa500;strokeColor=#d79b00;strokeWidth=2;" parent="1" source="rh4mJw4lm3L261S2mCym-127" target="rh4mJw4lm3L261S2mCym-133" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="390" y="1025" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rh4mJw4lm3L261S2mCym-127" value="&lt;b&gt;Forde Cancel&lt;/b&gt;&lt;div&gt;Success?&lt;/div&gt;" style="rhombus;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="460" y="970" width="120" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="rh4mJw4lm3L261S2mCym-136" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#ffcd28;gradientColor=#ffa500;strokeColor=#d79b00;strokeWidth=2;" parent="1" source="rh4mJw4lm3L261S2mCym-133" target="rh4mJw4lm3L261S2mCym-135" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rh4mJw4lm3L261S2mCym-133" value="Show Error message to User" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+          <mxGeometry x="310" y="1070" width="160" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="rh4mJw4lm3L261S2mCym-135" value="END" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="350" y="1189" width="80" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="rh4mJw4lm3L261S2mCym-142" value="END" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="670" y="350" width="80" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="rh4mJw4lm3L261S2mCym-143" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="rh4mJw4lm3L261S2mCym-101" target="rh4mJw4lm3L261S2mCym-142" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rh4mJw4lm3L261S2mCym-144" value="Trade Correct Workflow" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" parent="1" vertex="1">
+          <mxGeometry x="33" y="40" width="760" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="8b7M2n7Yvu72ODR4ucC6-37" value="[User Action:&amp;nbsp;&lt;b&gt;Accept Order]&lt;/b&gt;" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fillColor=#f0a30a;strokeColor=#BD7000;strokeWidth=2;" edge="1" parent="1" source="rh4mJw4lm3L261S2mCym-112" target="8b7M2n7Yvu72ODR4ucC6-40">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="149.5" y="1160" as="sourcePoint" />
+            <mxPoint x="149.5" y="1320" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8b7M2n7Yvu72ODR4ucC6-39" value="[User Action: &lt;b&gt;Accept Order]&lt;/b&gt;" style="endArrow=classic;html=1;rounded=0;exitX=0.007;exitY=0.457;exitDx=0;exitDy=0;fillColor=#fff2cc;strokeColor=#d6b656;strokeWidth=2;exitPerimeter=0;gradientColor=#ffd966;entryX=1;entryY=0.521;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="rh4mJw4lm3L261S2mCym-119" target="8b7M2n7Yvu72ODR4ucC6-41">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="314" y="1249" as="sourcePoint" />
+            <mxPoint x="260" y="1359" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8b7M2n7Yvu72ODR4ucC6-40" value="Allocation Screen" style="swimlane;whiteSpace=wrap;html=1;fillColor=#bac8d3;strokeColor=#23445d;" vertex="1" parent="1">
+          <mxGeometry x="30" y="1240" width="240" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="8b7M2n7Yvu72ODR4ucC6-41" value="&lt;b&gt;Allocation screen will open for the allocation of the Updated trade.&amp;nbsp;&lt;/b&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;ol&gt;&lt;li style=&quot;text-align: left;&quot;&gt;User do the allocation&amp;nbsp;&lt;/li&gt;&lt;li style=&quot;text-align: left;&quot;&gt;All compliance will run&lt;/li&gt;&lt;li style=&quot;text-align: left;&quot;&gt;After process and create order will create a Block (Front Global) Order&lt;/li&gt;&lt;li style=&quot;text-align: left;&quot;&gt;Block order creation and its status will be depend upon compliance result&lt;/li&gt;&lt;/ol&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" vertex="1" parent="8b7M2n7Yvu72ODR4ucC6-40">
+          <mxGeometry y="20" width="240" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="8b7M2n7Yvu72ODR4ucC6-42" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" target="8b7M2n7Yvu72ODR4ucC6-43">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="150" y="1450" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8b7M2n7Yvu72ODR4ucC6-43" value="END" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="110" y="1479" width="80" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
